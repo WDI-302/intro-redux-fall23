@@ -3,10 +3,12 @@ import { configureStore } from '@reduxjs/toolkit'
 //import slices here as reducer
 import counterReducer from './counterSlice'
 import usersReducer from './usersSlice'
+import postsReducer from './postsSlice'
 
 export default configureStore({
     reducer: {
         counter: counterReducer,  //key name is the name of the redux state, value is the imported reducer
-        users: usersReducer
+        users: usersReducer,
+        posts: postsReducer
     }
 })

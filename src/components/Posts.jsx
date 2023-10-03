@@ -10,7 +10,7 @@ const Posts = () => {
   return (
     <div>Posts
     <h3>----------------------------</h3>
-
+    
     </div>
 
   )
