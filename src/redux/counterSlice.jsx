@@ -7,7 +7,7 @@ export const counterSlice = createSlice({
     },
     // reducers to set the state
     reducers: {
-        increment: (state) => {
+        increment: (state, action) => {
             state.value = state.value + 1
         }
     }
@@ -19,6 +19,10 @@ export const { increment } = counterSlice.actions
 // essentially does this behind the scenes
 // const reducerName = param => dispatch({
 //     type: slice_name/reducer_name,
+//     payload: param
+// })
+// const increment = param => dispatch({
+//     type: counter/increment,
 //     payload: param
 // })
 
