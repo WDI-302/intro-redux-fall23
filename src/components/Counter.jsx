@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 import { useSelector, useDispatch} from 'react-redux'
-import { decrement, increment, addByAmount } from "../redux/counterSlice"
+import { decrement, increment, addByAmount, subtractByAmount, multiplyByAmount, divideByAmount } from "../redux/counterSlice"
 
 
 const Counter = () => {
@@ -22,9 +22,9 @@ const Counter = () => {
     <button onClick={() => dispatch(increment())}>Increment</button>
     <button onClick={() => dispatch(decrement())}>Decrement</button><br />
     <button onClick={() => dispatch(addByAmount(onChange))}>Add {onChange}</button>
-    <button>Subtract {onChange}</button>
-    <button>Mulitply {onChange}</button>
-    <button>Divide {onChange}</button>
+    <button onClick={() => dispatch(subtractByAmount(onChange))}>Subtract {onChange}</button>
+    <button onClick={() => dispatch(multiplyByAmount(onChange))}>Mulitply {onChange}</button>
+    <button onClick={() => dispatch(divideByAmount(onChange))}>Divide {onChange}</button>
 
     <br /><h3>----------------Local State-------------------</h3><br />
     <button onClick={() => setCount((count) => count + 1)}>

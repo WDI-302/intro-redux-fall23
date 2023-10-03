@@ -18,12 +18,26 @@ export const counterSlice = createSlice({
         addByAmount: (state, action) => {
             console.log(action);
             state.value += parseInt(action.payload)
+        },
+        subtractByAmount: (state, action) => {
+            state.value -= parseInt(action.payload)
+        },
+        multiplyByAmount: (state, action) => {
+            return {
+                value: state.value * parseInt(action.payload)
+            }
+        },
+        divideByAmount: (state, action) => {
+            let newValue = {
+                value: state.value / parseInt(action.payload)
+            }
+            return newValue
         }
     }
 })
 
 // Action creators are generated for each reducer function (from above), basically sets up dispatch
-export const { increment, decrement, addByAmount } = counterSlice.actions
+export const { increment, decrement, addByAmount, subtractByAmount, multiplyByAmount, divideByAmount } = counterSlice.actions
 
 // essentially does this behind the scenes
 // const reducerName = param => dispatch({
