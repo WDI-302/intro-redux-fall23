@@ -9,7 +9,7 @@ import {
   multiplyByAmount, 
   divideByAmount 
 } from "../redux/counterSlice"
-import { addUser } from '../redux/usersSlice'
+import { addUser, addAges } from '../redux/usersSlice'
 
 
 const Counter = () => {
@@ -44,7 +44,7 @@ const Counter = () => {
       age: 70
     }))}>Add User</button>
     <h3>Total Users Age: {totalAges}</h3>
-    <button>Add Ages</button>
+    <button onClick={() => dispatch(addAges())}>Add Ages</button>
 
     <br /><h3>----------------Local State-------------------</h3><br />
     <button onClick={() => setCount((count) => count + 1)}>
