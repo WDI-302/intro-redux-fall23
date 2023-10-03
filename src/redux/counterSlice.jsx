@@ -37,7 +37,14 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each reducer function (from above), basically sets up dispatch
-export const { increment, decrement, addByAmount, subtractByAmount, multiplyByAmount, divideByAmount } = counterSlice.actions
+export const { 
+    increment, 
+    decrement, 
+    addByAmount, 
+    subtractByAmount, 
+    multiplyByAmount, 
+    divideByAmount 
+} = counterSlice.actions
 
 // essentially does this behind the scenes
 // const reducerName = param => dispatch({
