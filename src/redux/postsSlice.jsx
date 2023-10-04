@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const postsSlice = createSlice({
     name: 'posts',
     initialState: [
-        {username: 'Grumpy', posts: ['grrr', 'arrgg']}, 
+        {username: 'Grumpy', posts: ['grrr', 'arrgg']},
         {username: 'Sleepy', posts: ['Zzzzzz...']},
         {username: 'Doc', posts: ['Say Ah....']}
     ],
@@ -14,8 +14,7 @@ export const postsSlice = createSlice({
             state = state.map(element => 
                 element.username === action.payload.username &&
                 element.posts.push(action.payload.posts) 
-            )
-            
+            )         
         }
     }
 })
